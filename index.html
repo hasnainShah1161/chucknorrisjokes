@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
+    />
+    <style>
+      #container {
+        margin: auto;
+        width: 50%;
+        border: 1px solid #ffc300;
+        padding: 10px;
+      }
+      #number {
+        border: 1px solid #ffc300;
+        padding: 10px;
+      }
+      #submit {
+        border: 10px solid white;
+        padding: 10px;
+      }
+      #loadingGif {
+        display: none;
+      }
+      #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 10%;
+      }
+      #container {
+        position: relative;
+        bottom: 0;
+
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+
+        padding: 20px;
+      }
+      #submit {
+        width: 200px;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: rgb(204, 191, 9);
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+    <title>chuck norris jokes</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="vid.mp4" type="video/mp4" />
+    </video>
+    <div class="mainContainer">
+      <div id="container">
+        <h1 style="color:#FFC300">Chuck Norris Jokes</h1>
+        <form id="joke-form">
+          <br />
+          <div>
+            <label for="number">number of jokes</label> <br />
+            <input type="number" id="number" />
+          </div>
+
+          <br />
+          <div><input type="submit" id="submit" /></div>
+          <img src="tenor.gif" alt="tenor.gif" id="loadingGif" />
+        </form>
+      </div>
+    </div>
+    <script src="externalApis.js"></script>
+  </body>
+</html>
